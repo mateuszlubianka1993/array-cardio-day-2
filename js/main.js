@@ -27,3 +27,10 @@ const isAdult = people.some(person => {
 });
 console.log({isAdult});
 
+// Array.prototype.every() // is everyone 19?
+const allAdults = people.every(person => {
+    const currenYear = (new Date()).getFullYear();
+    return currenYear - person.year >= 19;
+});
+console.log(allAdults);
+
